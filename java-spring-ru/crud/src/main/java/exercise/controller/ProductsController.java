@@ -63,8 +63,7 @@ public class ProductsController {
                 .orElseThrow(() -> new ConstraintViolationException(new HashSet<>()));
         product.setCategory(category);
         productRepository.save(product);
-        var productDto = productMapper.map(product);
-        return productDto;
+        return productMapper.map(product);
     }
 
     @PutMapping(path = "/{id}")
