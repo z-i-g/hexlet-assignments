@@ -39,7 +39,7 @@ public class ArticleController {
 
 
     // BEGIN
-    @PostMapping(path = "/tasks")
+    @PostMapping(path = "")
     @ResponseStatus(HttpStatus.CREATED)
     public ArticleDTO create(@Valid @RequestBody ArticleCreateDTO articleCreateDTO) {
         var article = articleMapper.map(articleCreateDTO);
